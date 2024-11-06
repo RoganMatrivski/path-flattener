@@ -3,6 +3,7 @@ name = "path-flatenner"
 version = "0.1.0"
 authors = ["Robin Mauritz <robinmauritzrm@gmail.com>"]
 edition = "2021"
+repository = "https://github.com/RoganMatrivski/path-flattener"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -21,3 +22,8 @@ opt-level = 3
 codegen-units = 1
 lto = true
 panic = "abort"
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
